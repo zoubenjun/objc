@@ -16,6 +16,7 @@
 		1D900D1A254BB45000DC028E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D19254BB45000DC028E /* main.m */; };
 		1D900D24254BB45000DC028E /* objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D23254BB45000DC028E /* objcTests.m */; };
 		1D900D2F254BB45000DC028E /* objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D2E254BB45000DC028E /* objcUITests.m */; };
+		1D900D54254C024C00DC028E /* ZBJImageUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D53254C024C00DC028E /* ZBJImageUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,9 @@
 		1D900D2A254BB45000DC028E /* objcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D900D2E254BB45000DC028E /* objcUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcUITests.m; sourceTree = "<group>"; };
 		1D900D30254BB45000DC028E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D900D4E254BF78000DC028E /* 性能优化.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化.md"; sourceTree = "<group>"; };
+		1D900D52254C024C00DC028E /* ZBJImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJImageUtils.h; sourceTree = "<group>"; };
+		1D900D53254C024C00DC028E /* ZBJImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJImageUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,9 @@
 		1D900D48254BB76D00DC028E /* 性能优化 */ = {
 			isa = PBXGroup;
 			children = (
+				1D900D4E254BF78000DC028E /* 性能优化.md */,
+				1D900D52254C024C00DC028E /* ZBJImageUtils.h */,
+				1D900D53254C024C00DC028E /* ZBJImageUtils.m */,
 			);
 			path = "性能优化";
 			sourceTree = "<group>";
@@ -399,6 +406,7 @@
 				1D900D09254BB44B00DC028E /* AppDelegate.m in Sources */,
 				1D900D1A254BB45000DC028E /* main.m in Sources */,
 				1D900D0C254BB44B00DC028E /* SceneDelegate.m in Sources */,
+				1D900D54254C024C00DC028E /* ZBJImageUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
