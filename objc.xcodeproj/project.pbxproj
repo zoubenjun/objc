@@ -58,6 +58,8 @@
 		1D900D4E254BF78000DC028E /* 性能优化.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "性能优化.md"; sourceTree = "<group>"; };
 		1D900D52254C024C00DC028E /* ZBJImageUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJImageUtils.h; sourceTree = "<group>"; };
 		1D900D53254C024C00DC028E /* ZBJImageUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJImageUtils.m; sourceTree = "<group>"; };
+		1D900D55254C4A2900DC028E /* 设计模式.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "设计模式.md"; sourceTree = "<group>"; };
+		1D900D56254C4A3D00DC028E /* 架构.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "架构.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,7 +168,7 @@
 				1D900D43254BB76D00DC028E /* Runloop */,
 				1D900D44254BB76D00DC028E /* 第三方库理解 */,
 				1D900D45254BB76D00DC028E /* Runtime */,
-				1D900D46254BB76D00DC028E /* 架构 */,
+				1D900D46254BB76D00DC028E /* 设计模式和架构 */,
 				1D900D47254BB76D00DC028E /* 内存管理 */,
 				1D900D48254BB76D00DC028E /* 性能优化 */,
 				1D900D49254BB76D00DC028E /* objc底层结构 */,
@@ -213,11 +215,13 @@
 			path = Runtime;
 			sourceTree = "<group>";
 		};
-		1D900D46254BB76D00DC028E /* 架构 */ = {
+		1D900D46254BB76D00DC028E /* 设计模式和架构 */ = {
 			isa = PBXGroup;
 			children = (
+				1D900D55254C4A2900DC028E /* 设计模式.md */,
+				1D900D56254C4A3D00DC028E /* 架构.md */,
 			);
-			path = "架构";
+			path = "设计模式和架构";
 			sourceTree = "<group>";
 		};
 		1D900D47254BB76D00DC028E /* 内存管理 */ = {
