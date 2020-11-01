@@ -1,2 +1,10 @@
-#  <#Title#>
+#  RunLoop
+
+NSRunLoop是基于CFRunLoop的封装
+
+RunLoop在Core Foundation中的5个类
+CFRunLoopRef，CFRunLoopModeRef，CFRunLoopSourceRef，CFRunLoopTimerRef，CFRunLoopObserverRef
+一个CFRunLoopRef包含多个CFRunLoopModeRef，一个CFRunLoopModeRef包含多个CFRunLoopSourceRef，CFRunLoopTimerRef，CFRunLoopObserverRef
+
+/Users/zbj/MyProject/objc/objc/看这里/RunLoop/RunLoop.png
 

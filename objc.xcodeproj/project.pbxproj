@@ -16,6 +16,7 @@
 		1D900D1A254BB45000DC028E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D19254BB45000DC028E /* main.m */; };
 		1D900D24254BB45000DC028E /* objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D23254BB45000DC028E /* objcTests.m */; };
 		1D900D2F254BB45000DC028E /* objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D2E254BB45000DC028E /* objcUITests.m */; };
+		1D901651254E44CA00DC028E /* RunLoop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D901650254E44CA00DC028E /* RunLoop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -451,6 +452,7 @@
 		1D901644254E3F8300DC028E /* Block.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Block.md; sourceTree = "<group>"; };
 		1D901646254E3F8300DC028E /* objc底层结构.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "objc底层结构.md"; sourceTree = "<group>"; };
 		1D90164F254E425700DC028E /* RunLoop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RunLoop.md; sourceTree = "<group>"; };
+		1D901650254E44CA00DC028E /* RunLoop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RunLoop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1105,6 +1107,7 @@
 		1D90164E254E425700DC028E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
+				1D901650254E44CA00DC028E /* RunLoop.png */,
 				1D90164F254E425700DC028E /* RunLoop.md */,
 			);
 			path = RunLoop;
@@ -1237,6 +1240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D900D17254BB45000DC028E /* LaunchScreen.storyboard in Resources */,
+				1D901651254E44CA00DC028E /* RunLoop.png in Resources */,
 				1D900D14254BB45000DC028E /* Assets.xcassets in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
 			);
