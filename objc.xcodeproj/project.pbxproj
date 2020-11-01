@@ -460,6 +460,7 @@
 		1D901655254F053500DC028E /* ZBJNSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJNSOperation.m; sourceTree = "<group>"; };
 		1D901657254F054500DC028E /* ZBJGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJGCD.h; sourceTree = "<group>"; };
 		1D901658254F054500DC028E /* ZBJGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJGCD.m; sourceTree = "<group>"; };
+		1D90165A254F181E00DC028E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,6 +519,7 @@
 				1D900D15254BB45000DC028E /* LaunchScreen.storyboard */,
 				1D900D18254BB45000DC028E /* Info.plist */,
 				1D900D19254BB45000DC028E /* main.m */,
+				1D90165A254F181E00DC028E /* README.md */,
 			);
 			path = objc;
 			sourceTree = "<group>";
