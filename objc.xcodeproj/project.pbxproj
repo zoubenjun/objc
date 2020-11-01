@@ -17,6 +17,8 @@
 		1D900D24254BB45000DC028E /* objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D23254BB45000DC028E /* objcTests.m */; };
 		1D900D2F254BB45000DC028E /* objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D2E254BB45000DC028E /* objcUITests.m */; };
 		1D901651254E44CA00DC028E /* RunLoop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D901650254E44CA00DC028E /* RunLoop.png */; };
+		1D901656254F053500DC028E /* ZBJNSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901655254F053500DC028E /* ZBJNSOperation.m */; };
+		1D901659254F054500DC028E /* ZBJGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901658254F054500DC028E /* ZBJGCD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -453,6 +455,11 @@
 		1D901646254E3F8300DC028E /* objc底层结构.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "objc底层结构.md"; sourceTree = "<group>"; };
 		1D90164F254E425700DC028E /* RunLoop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RunLoop.md; sourceTree = "<group>"; };
 		1D901650254E44CA00DC028E /* RunLoop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RunLoop.png; sourceTree = "<group>"; };
+		1D901653254F051A00DC028E /* 多线程.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "多线程.md"; sourceTree = "<group>"; };
+		1D901654254F053500DC028E /* ZBJNSOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJNSOperation.h; sourceTree = "<group>"; };
+		1D901655254F053500DC028E /* ZBJNSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJNSOperation.m; sourceTree = "<group>"; };
+		1D901657254F054500DC028E /* ZBJGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJGCD.h; sourceTree = "<group>"; };
+		1D901658254F054500DC028E /* ZBJGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJGCD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,6 +563,7 @@
 		1D90131E254E3E2500DC028E /* 看这里 */ = {
 			isa = PBXGroup;
 			children = (
+				1D901652254F051A00DC028E /* 多线程 */,
 				1D90164E254E425700DC028E /* RunLoop */,
 				1D9014B2254E3F8100DC028E /* 第三方库理解 */,
 				1D9014B0254E3F8100DC028E /* 动画 */,
@@ -1113,6 +1121,18 @@
 			path = RunLoop;
 			sourceTree = "<group>";
 		};
+		1D901652254F051A00DC028E /* 多线程 */ = {
+			isa = PBXGroup;
+			children = (
+				1D901653254F051A00DC028E /* 多线程.md */,
+				1D901654254F053500DC028E /* ZBJNSOperation.h */,
+				1D901655254F053500DC028E /* ZBJNSOperation.m */,
+				1D901657254F054500DC028E /* ZBJGCD.h */,
+				1D901658254F054500DC028E /* ZBJGCD.m */,
+			);
+			path = "多线程";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1268,6 +1288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D900D0F254BB44B00DC028E /* ViewController.m in Sources */,
+				1D901659254F054500DC028E /* ZBJGCD.m in Sources */,
+				1D901656254F053500DC028E /* ZBJNSOperation.m in Sources */,
 				1D900D09254BB44B00DC028E /* AppDelegate.m in Sources */,
 				1D900D1A254BB45000DC028E /* main.m in Sources */,
 				1D900D0C254BB44B00DC028E /* SceneDelegate.m in Sources */,
