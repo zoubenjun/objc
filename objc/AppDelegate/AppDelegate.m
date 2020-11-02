@@ -7,8 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "ZBJGCD.h"
-#import "ZBJNSOperation.h"
+//#import "ZBJGCD.h"
+//#import "ZBJNSOperation.h"
 
 @interface AppDelegate ()
 
@@ -22,7 +22,7 @@
     
 //    [ZBJGCD zbj_barrier];
 //    [ZBJNSOperation zbj_addDependency];
-    [ZBJNSOperation zbj_completion];
+//    [ZBJNSOperation zbj_completion];
 
     
     return YES;
