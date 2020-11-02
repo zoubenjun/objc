@@ -13,12 +13,12 @@
 //NSInvocationOperation
 - (void)zbj_invocation {
     
-    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(run) object:nil];
+    NSInvocationOperation *op = [[NSInvocationOperation alloc] initWithTarget:self selector:@selector(zbj_run) object:nil];
     // 调用start方法,在当前线程执行，因为只有线程数量大于1才会开启子线程
     [op start];
 }
 
-- (void)run {
+- (void)zbj_run {
     NSLog(@"------%@", [NSThread currentThread]);
 }
 
