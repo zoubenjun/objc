@@ -47,12 +47,12 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
 4、处理Source0
 5、如果有Source1，跳转到9.3
 6、通知Observer，线程即将休眠
-7、sleep，等待唤醒
-8、通知Observer，线程刚被唤醒
-9、被消息唤醒后处理,跳回2
-    9.1、处理Timer
-    9.2、处理GCD Async To Main Queue
-    9.3、处理Source1
+7、休眠，等待唤醒
+8、通知Observer，线程从休眠中唤醒
+9、被消息唤醒后处理下面内容,最后跳回2
+    9.1、判断是否有Timer需要处理，如果有处理Timer
+    9.2、判断是否有GCD Async To Main Queue需要处理，如果有处理GCD Async To Main Queue
+    9.3、判断是否有Source1需要处理，如果有处理Source1
 10、通知Observer，退出循环
 
 ## RunLoop 运行大概代码
@@ -61,11 +61,13 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
 
 /// 用DefaultMode启动
 void CFRunLoopRun(void) {
+
     CFRunLoopRunSpecific(CFRunLoopGetCurrent(), kCFRunLoopDefaultMode, 1.0e10, false);
 }
  
 /// 用指定的Mode启动，允许设置RunLoop超时时间
 int CFRunLoopRunInMode(CFStringRef modeName, CFTimeInterval seconds, Boolean stopAfterHandle) {
+
     return CFRunLoopRunSpecific(CFRunLoopGetCurrent(), modeName, seconds, returnAfterSourceHandled);
 }
  

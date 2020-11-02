@@ -2,6 +2,7 @@
 
 ## isa_t
 union isa_t {
+
     Class cls;
     uintptr_t bits;     //(isa.bits & ISA_MASK)
     
@@ -24,11 +25,13 @@ union isa_t {
 
 ## objc_object
 struct objc_object {
+
     isa_t isa;
 }
 
 ## objc_class
 struct objc_class : objc_object {
+
     Class superclass; // 指向父类的地址
     cache_t cache;   // 方法缓存列表
     //结构体，内部存储着主要的数据，通过&不同的掩码值获取不同的信息地址
@@ -45,6 +48,7 @@ struct objc_class : objc_object {
 
 ## cache_t
 struct cache_t {
+
     explicit_atomic<struct bucket_t *> _buckets;    //哈希表，直接通过@selector计算出对应数组里的index，然后直接取出。不需要遍历
     explicit_atomic<mask_t> _mask;//总共能存放的_buckets数-1（比如一共能存10个，这里的_mask为9）
     uint16_t _occupied;//实际存放_buckets数量
@@ -60,12 +64,14 @@ struct cache_t {
 typedef unsigned long     uintptr_t;
 typedef uintptr_t     cache_key_t;
 struct bucket_t {
+
     cache_key_t _key;
     MethodCacheIMP _imp;
 }
 
 ## class_rw_t
 struct class_rw_t {
+
     uint32_t flags;
     uint32_t version;
   
@@ -81,6 +87,7 @@ struct class_rw_t {
 
 ## class_ro_t
 struct class_ro_t {
+
     uint32_t flags;
     uint32_t instanceStart;
     uint32_t instanceSize;// 大小
@@ -103,8 +110,10 @@ class method_array_t :
 //method_list_t 里面存放的是method_t ，一维数组
     public list_array_tt<method_t, method_list_t> 
 {
+
     typedef list_array_tt<method_t, method_list_t> Super;
  public:
+ 
     method_list_t **beginCategoryMethodLists() {
         return beginLists();
     }
@@ -118,6 +127,7 @@ class method_array_t :
 
 ## method_t
 struct method_t {
+
     SEL name; // 方法选择器，也就是方法的名字
     const char *types; // 方法的返回类型和参数
     MethodListIMP imp; // 方法的存放地址

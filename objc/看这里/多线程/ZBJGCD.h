@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZBJGCD : NSObject
 
++ (void)zbj_barrier;
+
 @end
 
 NS_ASSUME_NONNULL_END

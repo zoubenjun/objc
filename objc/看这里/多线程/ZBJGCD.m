@@ -30,35 +30,35 @@
 
 //同步异步
 - (void)zbj_sync {
-    dispatch_queue_t myCustomQueue;
-    myCustomQueue = dispatch_queue_create("zbj.serialQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue;
+    queue = dispatch_queue_create("zbj.serialQueue", DISPATCH_QUEUE_SERIAL);
     //异步执行
-    dispatch_async(myCustomQueue, ^{
+    dispatch_async(queue, ^{
         NSLog(@"Do some work here.");
     });
     
     //同步执行
-    dispatch_sync(myCustomQueue, ^{
+    dispatch_sync(queue, ^{
         NSLog(@"Do some more work here.");
     });
     
     //挂起队列
-    dispatch_suspend(myCustomQueue);
+    dispatch_suspend(queue);
     
     //恢复队列
-    dispatch_resume(myCustomQueue);
+    dispatch_resume(queue);
 }
 
 //信号量
 - (void)zbj_semaphore {
-    dispatch_queue_t myCustomQueue;
-    myCustomQueue = dispatch_queue_create("zbj.serialQueue", DISPATCH_QUEUE_SERIAL);
+    dispatch_queue_t queue;
+    queue = dispatch_queue_create("zbj.serialQueue", DISPATCH_QUEUE_SERIAL);
     
     // 创建一个信号量
     dispatch_semaphore_t fd_sema = dispatch_semaphore_create(0);
     
     //异步执行
-    dispatch_async(myCustomQueue, ^{
+    dispatch_async(queue, ^{
         NSLog(@"Do some work here.");
         dispatch_semaphore_signal(fd_sema);
     });
@@ -72,8 +72,10 @@
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_t group = dispatch_group_create();
     
+//    dispatch_group_enter(group);
     // 添加队列到组中
     dispatch_group_async(group, queue, ^{
+//        dispatch_group_leave(group);
         // 一些异步操作
     });
     
@@ -127,7 +129,7 @@
 }
 
 //栅栏
-- (void)zbj_barrier {
++ (void)zbj_barrier {
     //【不能】使用全局并发队列
     dispatch_queue_t queue = dispatch_queue_create("zbj.concurrentQueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue, ^{

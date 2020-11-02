@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ZBJGCD.h"
+#import "ZBJNSOperation.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+//    [ZBJGCD zbj_barrier];
+//    [ZBJNSOperation zbj_addDependency];
+    [ZBJNSOperation zbj_completion];
+
+    
     return YES;
 }
 

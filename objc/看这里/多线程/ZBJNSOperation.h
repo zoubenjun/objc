@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZBJNSOperation : NSObject
 
++ (void)zbj_addDependency;
++ (void)zbj_completion;
+
 @end
 
 NS_ASSUME_NONNULL_END
