@@ -16,7 +16,6 @@
 		1D900D1A254BB45000DC028E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D19254BB45000DC028E /* main.m */; };
 		1D900D24254BB45000DC028E /* objcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D23254BB45000DC028E /* objcTests.m */; };
 		1D900D2F254BB45000DC028E /* objcUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D2E254BB45000DC028E /* objcUITests.m */; };
-		1D901651254E44CA00DC028E /* RunLoop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D901650254E44CA00DC028E /* RunLoop.png */; };
 		1D901656254F053500DC028E /* ZBJNSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901655254F053500DC028E /* ZBJNSOperation.m */; };
 		1D901659254F054500DC028E /* ZBJGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901658254F054500DC028E /* ZBJGCD.m */; };
 		1D90165D255014D700DC028E /* ZBJThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90165C255014D700DC028E /* ZBJThread.m */; };
@@ -457,7 +456,6 @@
 		1D901644254E3F8300DC028E /* Block.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Block.md; sourceTree = "<group>"; };
 		1D901646254E3F8300DC028E /* objc底层结构.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "objc底层结构.md"; sourceTree = "<group>"; };
 		1D90164F254E425700DC028E /* RunLoop.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RunLoop.md; sourceTree = "<group>"; };
-		1D901650254E44CA00DC028E /* RunLoop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RunLoop.png; sourceTree = "<group>"; };
 		1D901653254F051A00DC028E /* 多线程.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "多线程.md"; sourceTree = "<group>"; };
 		1D901654254F053500DC028E /* ZBJNSOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJNSOperation.h; sourceTree = "<group>"; };
 		1D901655254F053500DC028E /* ZBJNSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJNSOperation.m; sourceTree = "<group>"; };
@@ -1128,7 +1126,6 @@
 		1D90164E254E425700DC028E /* RunLoop */ = {
 			isa = PBXGroup;
 			children = (
-				1D901650254E44CA00DC028E /* RunLoop.png */,
 				1D90164F254E425700DC028E /* RunLoop.md */,
 				1D90166325502DE500DC028E /* ZBJWeakTimer.h */,
 				1D90166425502DE500DC028E /* ZBJWeakTimer.m */,
@@ -1287,7 +1284,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D900D17254BB45000DC028E /* LaunchScreen.storyboard in Resources */,
-				1D901651254E44CA00DC028E /* RunLoop.png in Resources */,
 				1D900D14254BB45000DC028E /* Assets.xcassets in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
 			);
