@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  子线程解码绘制图片，主线程直接显示
  */
-+ (void)showImage:(UIImage *)image inView:(UIImageView *)imageView;
++ (void)zbj_showImage:(UIImage *)image inView:(UIImageView *)imageView;
 @end
 
 NS_ASSUME_NONNULL_END

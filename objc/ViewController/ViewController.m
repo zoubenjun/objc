@@ -7,9 +7,13 @@
 //
 
 #import "ViewController.h"
-//#import "UIControl+BlocksKit.h"
+#import "UIControl+BlocksKit.h"
 //#import "ZBJWeakTimer.h"
 //#import "ZBJThread.h"
+//#import "ZBJPersonViewController.h"
+//#import "ZBJStudentViewController.h"
+#import "ZBJTeacherViewController.h"
+
 
 @interface ViewController ()
 
@@ -24,10 +28,59 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self zbj_mvvm];
+    
+//    [self zbj_mvp];
+//    [self zbj_mvc];
 //    [self zbj_testWeakTimer];
 //    [self zbj_testThread];
     
 }
+
+- (void)zbj_mvvm {
+        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+        [btn1 setTitle:@"mvvm" forState:UIControlStateNormal];
+        [self.view addSubview:btn1];
+    
+        __weak typeof (self) weakSelf = self;
+    
+        [btn1 bk_addEventHandler:^(id sender) {
+            ZBJTeacherViewController *vc = [[ZBJTeacherViewController alloc] init];
+//            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [weakSelf presentViewController:vc animated:YES completion:nil];
+        } forControlEvents:UIControlEventTouchUpInside];
+}
+
+//- (void)zbj_mvp {
+//        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+//        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//        [btn1 setTitle:@"mvp" forState:UIControlStateNormal];
+//        [self.view addSubview:btn1];
+//
+//        __weak typeof (self) weakSelf = self;
+//
+//        [btn1 bk_addEventHandler:^(id sender) {
+//            ZBJStudentViewController *vc = [[ZBJStudentViewController alloc] init];
+////            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+//            [weakSelf presentViewController:vc animated:YES completion:nil];
+//        } forControlEvents:UIControlEventTouchUpInside];
+//}
+
+//- (void)zbj_mvc {
+//        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
+//        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//        [btn1 setTitle:@"mvc" forState:UIControlStateNormal];
+//        [self.view addSubview:btn1];
+//
+//        __weak typeof (self) weakSelf = self;
+//
+//        [btn1 bk_addEventHandler:^(id sender) {
+//            ZBJPersonViewController *vc = [[ZBJPersonViewController alloc] init];
+////            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+//            [weakSelf presentViewController:vc animated:YES completion:nil];
+//        } forControlEvents:UIControlEventTouchUpInside];
+//}
 
 //- (void)zbj_testWeakTimer {
 //    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];

@@ -9,7 +9,7 @@
 #import "ZBJImageUtils.h"
 
 @implementation ZBJImageUtils
-+ (void)showImage:(UIImage *)image inView:(UIImageView *)imageView {
++ (void)zbj_showImage:(UIImage *)image inView:(UIImageView *)imageView {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         CGImageRef cgImage = [image CGImage];
         

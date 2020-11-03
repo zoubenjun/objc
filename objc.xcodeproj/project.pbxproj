@@ -21,6 +21,19 @@
 		1D90165D255014D700DC028E /* ZBJThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90165C255014D700DC028E /* ZBJThread.m */; };
 		1D90166225502CB800DC028E /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90166125502CB800DC028E /* UIControl+BlocksKit.m */; };
 		1D90166525502DE500DC028E /* ZBJWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90166425502DE500DC028E /* ZBJWeakTimer.m */; };
+		1D90166B2550FB8700DC028E /* ZBJPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90166A2550FB8700DC028E /* ZBJPersonModel.m */; };
+		1D90166E2550FBAF00DC028E /* ZBJPersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90166D2550FBAF00DC028E /* ZBJPersonView.m */; };
+		1D9016712550FBC700DC028E /* ZBJPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9016702550FBC700DC028E /* ZBJPersonViewController.m */; };
+		1D90167525516E9800DC028E /* ZBJStudentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90167425516E9800DC028E /* ZBJStudentViewController.m */; };
+		1D90167825516EB500DC028E /* ZBJStudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90167725516EB500DC028E /* ZBJStudentModel.m */; };
+		1D90167B25516EC900DC028E /* ZBJStudentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90167A25516EC900DC028E /* ZBJStudentView.m */; };
+		1D90167E25516F1200DC028E /* ZBJStudentPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90167D25516F1200DC028E /* ZBJStudentPresenter.m */; };
+		1D9016812551759400DC028E /* ZBJTeacherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9016802551759400DC028E /* ZBJTeacherModel.m */; };
+		1D901684255175A600DC028E /* ZBJTeacherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901683255175A600DC028E /* ZBJTeacherView.m */; };
+		1D901687255175BF00DC028E /* ZBJTeacherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901686255175BF00DC028E /* ZBJTeacherViewModel.m */; };
+		1D90168A255175EE00DC028E /* ZBJTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901689255175EE00DC028E /* ZBJTeacherViewController.m */; };
+		1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */; };
+		1D90169825517E4D00DC028E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169525517E4D00DC028E /* FBKVOController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -469,6 +482,33 @@
 		1D90166125502CB800DC028E /* UIControl+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BlocksKit.m"; sourceTree = "<group>"; };
 		1D90166325502DE500DC028E /* ZBJWeakTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJWeakTimer.h; sourceTree = "<group>"; };
 		1D90166425502DE500DC028E /* ZBJWeakTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJWeakTimer.m; sourceTree = "<group>"; };
+		1D9016692550FB8700DC028E /* ZBJPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJPersonModel.h; sourceTree = "<group>"; };
+		1D90166A2550FB8700DC028E /* ZBJPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJPersonModel.m; sourceTree = "<group>"; };
+		1D90166C2550FBAF00DC028E /* ZBJPersonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJPersonView.h; sourceTree = "<group>"; };
+		1D90166D2550FBAF00DC028E /* ZBJPersonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJPersonView.m; sourceTree = "<group>"; };
+		1D90166F2550FBC700DC028E /* ZBJPersonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJPersonViewController.h; sourceTree = "<group>"; };
+		1D9016702550FBC700DC028E /* ZBJPersonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJPersonViewController.m; sourceTree = "<group>"; };
+		1D9016722551070100DC028E /* MVC.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = MVC.md; sourceTree = "<group>"; };
+		1D90167325516E9800DC028E /* ZBJStudentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJStudentViewController.h; sourceTree = "<group>"; };
+		1D90167425516E9800DC028E /* ZBJStudentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJStudentViewController.m; sourceTree = "<group>"; };
+		1D90167625516EB500DC028E /* ZBJStudentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJStudentModel.h; sourceTree = "<group>"; };
+		1D90167725516EB500DC028E /* ZBJStudentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJStudentModel.m; sourceTree = "<group>"; };
+		1D90167925516EC900DC028E /* ZBJStudentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJStudentView.h; sourceTree = "<group>"; };
+		1D90167A25516EC900DC028E /* ZBJStudentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJStudentView.m; sourceTree = "<group>"; };
+		1D90167C25516F1200DC028E /* ZBJStudentPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJStudentPresenter.h; sourceTree = "<group>"; };
+		1D90167D25516F1200DC028E /* ZBJStudentPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJStudentPresenter.m; sourceTree = "<group>"; };
+		1D90167F2551759400DC028E /* ZBJTeacherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTeacherModel.h; sourceTree = "<group>"; };
+		1D9016802551759400DC028E /* ZBJTeacherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTeacherModel.m; sourceTree = "<group>"; };
+		1D901682255175A600DC028E /* ZBJTeacherView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTeacherView.h; sourceTree = "<group>"; };
+		1D901683255175A600DC028E /* ZBJTeacherView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTeacherView.m; sourceTree = "<group>"; };
+		1D901685255175BF00DC028E /* ZBJTeacherViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTeacherViewModel.h; sourceTree = "<group>"; };
+		1D901686255175BF00DC028E /* ZBJTeacherViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTeacherViewModel.m; sourceTree = "<group>"; };
+		1D901688255175EE00DC028E /* ZBJTeacherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTeacherViewController.h; sourceTree = "<group>"; };
+		1D901689255175EE00DC028E /* ZBJTeacherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTeacherViewController.m; sourceTree = "<group>"; };
+		1D90169325517E4D00DC028E /* FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBKVOController.h; sourceTree = "<group>"; };
+		1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
+		1D90169525517E4D00DC028E /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
+		1D90169625517E4D00DC028E /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1077,6 +1117,9 @@
 			children = (
 				1D9014B7254E3F8100DC028E /* 设计模式.md */,
 				1D9014B8254E3F8100DC028E /* 架构.md */,
+				1D9016682550FB5000DC028E /* Demo_MVC */,
+				1D9016662550FB5000DC028E /* Demo_MVP */,
+				1D9016672550FB5000DC028E /* Demo_MVVM */,
 			);
 			path = "设计模式和架构";
 			sourceTree = "<group>";
@@ -1155,6 +1198,62 @@
 				1D90166125502CB800DC028E /* UIControl+BlocksKit.m */,
 			);
 			path = "分类";
+			sourceTree = "<group>";
+		};
+		1D9016662550FB5000DC028E /* Demo_MVP */ = {
+			isa = PBXGroup;
+			children = (
+				1D90167625516EB500DC028E /* ZBJStudentModel.h */,
+				1D90167725516EB500DC028E /* ZBJStudentModel.m */,
+				1D90167925516EC900DC028E /* ZBJStudentView.h */,
+				1D90167A25516EC900DC028E /* ZBJStudentView.m */,
+				1D90167C25516F1200DC028E /* ZBJStudentPresenter.h */,
+				1D90167D25516F1200DC028E /* ZBJStudentPresenter.m */,
+				1D90167325516E9800DC028E /* ZBJStudentViewController.h */,
+				1D90167425516E9800DC028E /* ZBJStudentViewController.m */,
+			);
+			path = Demo_MVP;
+			sourceTree = "<group>";
+		};
+		1D9016672550FB5000DC028E /* Demo_MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				1D90168B255176AB00DC028E /* FBKVOController */,
+				1D90167F2551759400DC028E /* ZBJTeacherModel.h */,
+				1D9016802551759400DC028E /* ZBJTeacherModel.m */,
+				1D901682255175A600DC028E /* ZBJTeacherView.h */,
+				1D901683255175A600DC028E /* ZBJTeacherView.m */,
+				1D901685255175BF00DC028E /* ZBJTeacherViewModel.h */,
+				1D901686255175BF00DC028E /* ZBJTeacherViewModel.m */,
+				1D901688255175EE00DC028E /* ZBJTeacherViewController.h */,
+				1D901689255175EE00DC028E /* ZBJTeacherViewController.m */,
+			);
+			path = Demo_MVVM;
+			sourceTree = "<group>";
+		};
+		1D9016682550FB5000DC028E /* Demo_MVC */ = {
+			isa = PBXGroup;
+			children = (
+				1D9016692550FB8700DC028E /* ZBJPersonModel.h */,
+				1D90166A2550FB8700DC028E /* ZBJPersonModel.m */,
+				1D90166C2550FBAF00DC028E /* ZBJPersonView.h */,
+				1D90166D2550FBAF00DC028E /* ZBJPersonView.m */,
+				1D90166F2550FBC700DC028E /* ZBJPersonViewController.h */,
+				1D9016702550FBC700DC028E /* ZBJPersonViewController.m */,
+				1D9016722551070100DC028E /* MVC.md */,
+			);
+			path = Demo_MVC;
+			sourceTree = "<group>";
+		};
+		1D90168B255176AB00DC028E /* FBKVOController */ = {
+			isa = PBXGroup;
+			children = (
+				1D90169325517E4D00DC028E /* FBKVOController.h */,
+				1D90169525517E4D00DC028E /* FBKVOController.m */,
+				1D90169625517E4D00DC028E /* NSObject+FBKVOController.h */,
+				1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */,
+			);
+			path = FBKVOController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1310,15 +1409,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D90167B25516EC900DC028E /* ZBJStudentView.m in Sources */,
 				1D90166225502CB800DC028E /* UIControl+BlocksKit.m in Sources */,
 				1D900D0F254BB44B00DC028E /* ViewController.m in Sources */,
 				1D90165D255014D700DC028E /* ZBJThread.m in Sources */,
+				1D90167525516E9800DC028E /* ZBJStudentViewController.m in Sources */,
+				1D9016812551759400DC028E /* ZBJTeacherModel.m in Sources */,
+				1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */,
+				1D90167E25516F1200DC028E /* ZBJStudentPresenter.m in Sources */,
+				1D90169825517E4D00DC028E /* FBKVOController.m in Sources */,
 				1D901659254F054500DC028E /* ZBJGCD.m in Sources */,
+				1D9016712550FBC700DC028E /* ZBJPersonViewController.m in Sources */,
 				1D901656254F053500DC028E /* ZBJNSOperation.m in Sources */,
+				1D901687255175BF00DC028E /* ZBJTeacherViewModel.m in Sources */,
+				1D90166B2550FB8700DC028E /* ZBJPersonModel.m in Sources */,
+				1D90167825516EB500DC028E /* ZBJStudentModel.m in Sources */,
 				1D900D09254BB44B00DC028E /* AppDelegate.m in Sources */,
 				1D900D1A254BB45000DC028E /* main.m in Sources */,
 				1D900D0C254BB44B00DC028E /* SceneDelegate.m in Sources */,
 				1D90166525502DE500DC028E /* ZBJWeakTimer.m in Sources */,
+				1D901684255175A600DC028E /* ZBJTeacherView.m in Sources */,
+				1D90168A255175EE00DC028E /* ZBJTeacherViewController.m in Sources */,
+				1D90166E2550FBAF00DC028E /* ZBJPersonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
