@@ -44,11 +44,12 @@
 //开始运行
 - (void)zbj_run {
     if (!self.thread) return;
-    
+    if (self.thread.isExecuting) return;
+    self.stopped = NO;
     [self.thread start];
 }
 
-//执行e任务
+//执行任务
 - (void)zbj_executeTask:(void(^)(void))task {
     if (!self.thread || !task) return;
     
