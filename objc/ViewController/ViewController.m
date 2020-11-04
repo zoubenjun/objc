@@ -14,7 +14,6 @@
 //#import "ZBJStudentViewController.h"
 #import "ZBJTeacherViewController.h"
 
-
 @interface ViewController ()
 
 //@property (nonatomic, strong) NSTimer *timer;

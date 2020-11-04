@@ -11,7 +11,8 @@ Source0事件有（触摸事件，performSelector）断点在控制台输入bt�
 Source1是基于port间通信
 
 ## CFRunLoop 结构
-struct __CFRunLoop {
+
+```struct __CFRunLoop {
     CFMutableSetRef _commonModes;     // Set
     CFMutableSetRef _commonModeItems; // Set<Source/Observer/Timer>
     CFRunLoopModeRef _currentMode;    // Current Runloop Mode
@@ -38,42 +39,42 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
     kCFRunLoopAfterWaiting  = (1UL << 6), // 刚从休眠中唤醒
     kCFRunLoopExit          = (1UL << 7), // 即将退出Loop
 };
-
+```
 
 ## RunLoop运行流程
-1、通知Observer，进入RunLoop
-2、通知Observer，即将处理Timers
-3、通知Observer，即将处理Source
-4、处理Source0
-5、如果有Source1，跳转到9.3
-6、通知Observer，线程即将休眠
-7、休眠，等待唤醒
-8、通知Observer，线程从休眠中唤醒
-9、被消息唤醒后处理下面内容,最后跳回2
-    9.1、判断是否有Timer需要处理，如果有处理Timer
-    9.2、判断是否有GCD Async To Main Queue需要处理，如果有处理GCD Async To Main Queue
-    9.3、判断是否有Source1需要处理，如果有处理Source1
-10、通知Observer，退出循环
+- 1 通知Observer，进入RunLoop
+- 2 通知Observer，即将处理Timers
+- 3 通知Observer，即将处理Source
+- 4 处理Source0
+- 5 如果有Source1，跳转到9.3
+- 6 通知Observer，线程即将休眠
+- 7 休眠，等待唤醒
+- 8 通知Observer，线程从休眠中唤醒
+- 9 被消息唤醒后处理下面内容,最后跳回2
+    - 9.1 判断是否有Timer需要处理，如果有处理Timer
+    - 9.2 判断是否有GCD Async To Main Queue需要处理，如果有处理GCD Async To Main Queue
+    - 9.3 判断是否有Source1需要处理，如果有处理Source1
+- 10 通知Observer，退出循环
 
 ## RunLoop 运行大概代码
 
 内容拷贝于：https://blog.ibireme.com/2015/05/18/runloop/
 
 /// 用DefaultMode启动
-void CFRunLoopRun(void) {
 
+```void CFRunLoopRun(void) {
     CFRunLoopRunSpecific(CFRunLoopGetCurrent(), kCFRunLoopDefaultMode, 1.0e10, false);
 }
- 
+```
 /// 用指定的Mode启动，允许设置RunLoop超时时间
-int CFRunLoopRunInMode(CFStringRef modeName, CFTimeInterval seconds, Boolean stopAfterHandle) {
 
+```int CFRunLoopRunInMode(CFStringRef modeName, CFTimeInterval seconds, Boolean stopAfterHandle) {
     return CFRunLoopRunSpecific(CFRunLoopGetCurrent(), modeName, seconds, returnAfterSourceHandled);
 }
- 
+```
 /// RunLoop的实现
-int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
-    
+
+```int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
     /// 首先根据modeName找到对应mode
     CFRunLoopModeRef currentMode = __CFRunLoopFindMode(runloop, modeName, false);
     /// 如果mode里没有source/timer/observer, 直接返回。
@@ -171,5 +172,4 @@ int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
     /// 10. 通知 Observers: RunLoop 即将退出。
     __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopExit);
 }
-
-
+```

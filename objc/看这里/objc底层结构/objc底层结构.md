@@ -1,8 +1,7 @@
 #  objc结构
 
 ## isa_t
-union isa_t {
-
+```union isa_t {
     Class cls;
     uintptr_t bits;     //(isa.bits & ISA_MASK)
     
@@ -53,25 +52,26 @@ struct cache_t {
     explicit_atomic<mask_t> _mask;//总共能存放的_buckets数-1（比如一共能存10个，这里的_mask为9）
     uint16_t _occupied;//实际存放_buckets数量
 }
-1、先看缓存中是否已经存在了该方法，如果已经存在，直接return掉，不用再缓存
-2、如果当前cache还没被初始化，则分配一个大小为4的数组，并设置_mask为3。
-3、如果存入缓存后的大小小于当前大小的3/4，则当前缓存大小还可以使用，无需扩容
-4、否则缓存太满，需要扩容，扩容为原来大小的2倍。放弃旧的缓存，新扩容的缓存为空。并保存当前调用的方法，保存后有一个数据，以前存的方法全部丢弃。
-5、将_key与_mask相与，因为_mask是数组大小-1，所以得到的结果刚好小于数组的大小。
-6、如果得到的位置已经被占用，则往后寻找，直到找到空的位置，把缓存设置到这个位置（如果到了最后一个都不为空会跳到第一个查找，直到回到最开始的位置，如果没有空会执行第4步）。
+```
+## 方法缓存查找
+- 先看缓存中是否已经存在了该方法，如果已经存在，直接return掉，不用再缓存
+- 如果当前cache还没被初始化，则分配一个大小为4的数组，并设置_mask为3。
+- 如果存入缓存后的大小小于当前大小的3/4，则当前缓存大小还可以使用，无需扩容
+- 否则缓存太满，需要扩容，扩容为原来大小的2倍。放弃旧的缓存，新扩容的缓存为空。并保存当前调用的方法，保存后有一个数据，以前存的方法全部丢弃。
+- 将_key与_mask相与，因为_mask是数组大小-1，所以得到的结果刚好小于数组的大小。
+- 如果得到的位置已经被占用，则往后寻找，直到找到空的位置，把缓存设置到这个位置（如果到了最后一个都不为空会跳到第一个查找，直到回到最开始的位置，如果没有空会执行第4步）。
 
 ## bucket_t
 typedef unsigned long     uintptr_t;
 typedef uintptr_t     cache_key_t;
-struct bucket_t {
+```struct bucket_t {
 
     cache_key_t _key;
     MethodCacheIMP _imp;
 }
-
+```
 ## class_rw_t
-struct class_rw_t {
-
+```struct class_rw_t {
     uint32_t flags;
     uint32_t version;
   
@@ -103,11 +103,12 @@ struct class_ro_t {
     property_list_t *baseProperties; // 初始属性列表
     ......
 }
-
+```
 ## method_array_t
 class method_array_t : 
 // method_array_t里面存放的是method_list_t, 二维数组
 //method_list_t 里面存放的是method_t ，一维数组
+```
     public list_array_tt<method_t, method_list_t> 
 {
 
@@ -132,3 +133,4 @@ struct method_t {
     const char *types; // 方法的返回类型和参数
     MethodListIMP imp; // 方法的存放地址
 };
+```
