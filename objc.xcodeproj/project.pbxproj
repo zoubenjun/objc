@@ -34,6 +34,8 @@
 		1D90168A255175EE00DC028E /* ZBJTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901689255175EE00DC028E /* ZBJTeacherViewController.m */; };
 		1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */; };
 		1D90169825517E4D00DC028E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169525517E4D00DC028E /* FBKVOController.m */; };
+		1D90169C2552283A00DC028E /* 数据结构.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169A2552283A00DC028E /* 数据结构.md */; };
+		1D90169D2552283A00DC028E /* 算法.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169B2552283A00DC028E /* 算法.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -509,6 +511,8 @@
 		1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+FBKVOController.m"; sourceTree = "<group>"; };
 		1D90169525517E4D00DC028E /* FBKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBKVOController.m; sourceTree = "<group>"; };
 		1D90169625517E4D00DC028E /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
+		1D90169A2552283A00DC028E /* 数据结构.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "数据结构.md"; sourceTree = "<group>"; };
+		1D90169B2552283A00DC028E /* 算法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "算法.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -613,6 +617,7 @@
 		1D90131E254E3E2500DC028E /* 看这里 */ = {
 			isa = PBXGroup;
 			children = (
+				1D9016992552283A00DC028E /* 数据结构和算法 */,
 				1D90165E25502C5200DC028E /* 分类 */,
 				1D901652254F051A00DC028E /* 多线程 */,
 				1D90164E254E425700DC028E /* RunLoop */,
@@ -1256,6 +1261,15 @@
 			path = FBKVOController;
 			sourceTree = "<group>";
 		};
+		1D9016992552283A00DC028E /* 数据结构和算法 */ = {
+			isa = PBXGroup;
+			children = (
+				1D90169A2552283A00DC028E /* 数据结构.md */,
+				1D90169B2552283A00DC028E /* 算法.md */,
+			);
+			path = "数据结构和算法";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1384,7 +1398,9 @@
 			files = (
 				1D900D17254BB45000DC028E /* LaunchScreen.storyboard in Resources */,
 				1D900D14254BB45000DC028E /* Assets.xcassets in Resources */,
+				1D90169D2552283A00DC028E /* 算法.md in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
+				1D90169C2552283A00DC028E /* 数据结构.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

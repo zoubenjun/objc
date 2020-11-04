@@ -53,3 +53,9 @@ http://www.mamicode.com/info-detail-2952349.html
    如果返回NO，结束查找。并调用 valueForUndefinedKey: 报异常
 
   3、如果没找到getter方法和属性值，调用 valueForUndefinedKey: 报异常
+
+## Runtime使用场景
+1、做用户埋点统计,自定义一个方法替换uicontrol的sendAction:to:forEvent
+2、处理异常崩溃（NSDictionary, NSMutableDictionary,  NSArray, NSMutableArray 的处理）
+3、按钮最小点击区设置
+4、json转model
