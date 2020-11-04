@@ -19,7 +19,6 @@
 //@property (nonatomic, strong) NSTimer *timer;
 //@property (nonatomic, strong) ZBJThread *thread;
 
-
 @end
 
 @implementation ViewController
@@ -28,6 +27,7 @@
     [super viewDidLoad];
     
     [self zbj_mvvm];
+    
     
 //    [self zbj_mvp];
 //    [self zbj_mvc];
