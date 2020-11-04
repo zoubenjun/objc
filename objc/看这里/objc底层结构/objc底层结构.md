@@ -1,7 +1,8 @@
 #  objc结构
 
 ## isa_t
-```union isa_t {
+```
+union isa_t {
     Class cls;
     uintptr_t bits;     //(isa.bits & ISA_MASK)
     
@@ -64,14 +65,16 @@ struct cache_t {
 ## bucket_t
 typedef unsigned long     uintptr_t;
 typedef uintptr_t     cache_key_t;
-```struct bucket_t {
+```
+struct bucket_t {
 
     cache_key_t _key;
     MethodCacheIMP _imp;
 }
 ```
 ## class_rw_t
-```struct class_rw_t {
+```
+struct class_rw_t {
     uint32_t flags;
     uint32_t version;
   

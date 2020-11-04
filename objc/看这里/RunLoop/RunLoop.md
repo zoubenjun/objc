@@ -12,7 +12,8 @@ Source1是基于port间通信
 
 ## CFRunLoop 结构
 
-```struct __CFRunLoop {
+```
+struct __CFRunLoop {
     CFMutableSetRef _commonModes;     // Set
     CFMutableSetRef _commonModeItems; // Set<Source/Observer/Timer>
     CFRunLoopModeRef _currentMode;    // Current Runloop Mode
@@ -62,19 +63,22 @@ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
 
 /// 用DefaultMode启动
 
-```void CFRunLoopRun(void) {
+```
+void CFRunLoopRun(void) {
     CFRunLoopRunSpecific(CFRunLoopGetCurrent(), kCFRunLoopDefaultMode, 1.0e10, false);
 }
 ```
 /// 用指定的Mode启动，允许设置RunLoop超时时间
 
-```int CFRunLoopRunInMode(CFStringRef modeName, CFTimeInterval seconds, Boolean stopAfterHandle) {
+```
+int CFRunLoopRunInMode(CFStringRef modeName, CFTimeInterval seconds, Boolean stopAfterHandle) {
     return CFRunLoopRunSpecific(CFRunLoopGetCurrent(), modeName, seconds, returnAfterSourceHandled);
 }
 ```
 /// RunLoop的实现
 
-```int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
+```
+int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
     /// 首先根据modeName找到对应mode
     CFRunLoopModeRef currentMode = __CFRunLoopFindMode(runloop, modeName, false);
     /// 如果mode里没有source/timer/observer, 直接返回。

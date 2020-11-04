@@ -3,7 +3,8 @@
 ## KVO
 KVOController
 ### 常用方法
-```- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context;
+```
+- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context;
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 ```
 KVO的本质是利用Runtime在实例对象添加监听后生成一个NSKVONotifying_XXX的类对象，然后把实例对象的isa指针指向该类对象。
