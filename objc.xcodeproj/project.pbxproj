@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D67BF76255CE9A9009D66D9 /* ZBJTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */; };
 		1D900D09254BB44B00DC028E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D08254BB44B00DC028E /* AppDelegate.m */; };
 		1D900D0C254BB44B00DC028E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D0B254BB44B00DC028E /* SceneDelegate.m */; };
 		1D900D0F254BB44B00DC028E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D0E254BB44B00DC028E /* ViewController.m */; };
@@ -36,6 +37,7 @@
 		1D90169825517E4D00DC028E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169525517E4D00DC028E /* FBKVOController.m */; };
 		1D90169C2552283A00DC028E /* 数据结构.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169A2552283A00DC028E /* 数据结构.md */; };
 		1D90169D2552283A00DC028E /* 算法.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169B2552283A00DC028E /* 算法.md */; };
+		1D9016A025552F2C00DC028E /* 组件化.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169F25552F2C00DC028E /* 组件化.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D67BF73255CE619009D66D9 /* UI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UI.md; sourceTree = "<group>"; };
+		1D67BF74255CE9A9009D66D9 /* ZBJTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTestViewController.h; sourceTree = "<group>"; };
+		1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTestViewController.m; sourceTree = "<group>"; };
 		1D900D04254BB44B00DC028E /* objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D900D07254BB44B00DC028E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D900D08254BB44B00DC028E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -513,6 +518,8 @@
 		1D90169625517E4D00DC028E /* NSObject+FBKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FBKVOController.h"; sourceTree = "<group>"; };
 		1D90169A2552283A00DC028E /* 数据结构.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "数据结构.md"; sourceTree = "<group>"; };
 		1D90169B2552283A00DC028E /* 算法.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "算法.md"; sourceTree = "<group>"; };
+		1D90169F25552F2C00DC028E /* 组件化.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "组件化.md"; sourceTree = "<group>"; };
+		1D9016A72556184500DC028E /* CocoaPods私有库.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CocoaPods私有库.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +547,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D67BF6E255CE5F3009D66D9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1D67BF73255CE619009D66D9 /* UI.md */,
+				1D67BF74255CE9A9009D66D9 /* ZBJTestViewController.h */,
+				1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		1D900CFB254BB44B00DC028E = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +634,8 @@
 		1D90131E254E3E2500DC028E /* 看这里 */ = {
 			isa = PBXGroup;
 			children = (
+				1D67BF6E255CE5F3009D66D9 /* UI */,
+				1D90169E25552F2C00DC028E /* 组件化（模块化） */,
 				1D9016992552283A00DC028E /* 数据结构和算法 */,
 				1D90165E25502C5200DC028E /* 分类 */,
 				1D901652254F051A00DC028E /* 多线程 */,
@@ -1270,6 +1289,15 @@
 			path = "数据结构和算法";
 			sourceTree = "<group>";
 		};
+		1D90169E25552F2C00DC028E /* 组件化（模块化） */ = {
+			isa = PBXGroup;
+			children = (
+				1D90169F25552F2C00DC028E /* 组件化.md */,
+				1D9016A72556184500DC028E /* CocoaPods私有库.md */,
+			);
+			path = "组件化（模块化）";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1401,6 +1429,7 @@
 				1D90169D2552283A00DC028E /* 算法.md in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
 				1D90169C2552283A00DC028E /* 数据结构.md in Resources */,
+				1D9016A025552F2C00DC028E /* 组件化.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1427,6 +1456,7 @@
 			files = (
 				1D90167B25516EC900DC028E /* ZBJStudentView.m in Sources */,
 				1D90166225502CB800DC028E /* UIControl+BlocksKit.m in Sources */,
+				1D67BF76255CE9A9009D66D9 /* ZBJTestViewController.m in Sources */,
 				1D900D0F254BB44B00DC028E /* ViewController.m in Sources */,
 				1D90165D255014D700DC028E /* ZBJThread.m in Sources */,
 				1D90167525516E9800DC028E /* ZBJStudentViewController.m in Sources */,

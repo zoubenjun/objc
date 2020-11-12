@@ -1,5 +1,30 @@
 #  Block
 
+__block 修饰的对象会被Runtime编译为
+```
+struct __Block_byref_num_0 {
+  void *__isa;
+__Block_byref_num_0 *__forwarding;
+ int __flags;
+ int __size;
+ int num;
+};
+struct __blockTest_block_impl_0 {
+  struct __block_impl impl;
+  struct __blockTest_block_desc_0* Desc;
+  __Block_byref_num_0 *num; // by ref
+  __blockTest_block_impl_0(void *fp, struct __blockTest_block_desc_0 *desc, __Block_byref_num_0 *_num, int flags=0) : num(_num->__forwarding) {
+    impl.isa = &_NSConcreteStackBlock;
+    impl.Flags = flags;
+    impl.FuncPtr = fp;
+    Desc = desc;
+  }
+};
+```
+使用时通过__forwarding去找到num。
+
+https://www.jianshu.com/p/221d0778dcaa
+
 https://www.bbsmax.com/A/gAJGY07bdZ/
 感觉这篇文章写得很全面
 

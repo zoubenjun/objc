@@ -108,3 +108,112 @@
 }
 
 @end
+
+
+
+@interface ZBJCustomSyncOperation : NSOperation
+
+@end
+
+@implementation ZBJCustomSyncOperation
+/*自定义main方法执行你的任务*/
+- (void)main {
+    //捕获异常
+    @try {
+        //在这里我们要创建自己的释放池，因为这里我们拿不到主线程的释放池
+        @autoreleasepool {
+            BOOL isDone = NO;
+            //正确的响应取消事件
+            while(![self isCancelled] && !isDone)
+            {
+                //在这里执行自己的任务操作
+                NSLog(@"执行自定义非并发NSOperation");
+                NSThread *thread = [NSThread currentThread];
+                NSLog(@"%@",thread);
+                
+                //任务执行完成后将isDone设为YES
+                isDone = YES;
+            }
+        }
+    }
+    @catch (NSException *exception) {
+    }
+}
+@end
+
+
+/*
+ *自定义并发的NSOperation需要以下步骤：
+ 1.start方法：该方法必须实现，
+ 2.main:该方法可选，如果你在start方法中定义了你的任务，则这个方法就可以不实现，但通常为了代码逻辑清晰，通常会在该方法中定义自己的任务
+ 3.isExecuting  isFinished 主要作用是在线程状态改变时，产生适当的KVO通知
+ 4.isConcurrent :必须覆盖并返回YES;
+ */
+@interface ZBJCustomAsyncOperation : NSOperation{
+    BOOL _executing;
+    BOOL _finished;
+}
+
+@end
+
+@implementation ZBJCustomAsyncOperation
+
+- (id)init {
+    if (self = [super init]) {
+        _executing = NO;
+        _finished = NO;
+    }
+    return self;
+}
+- (BOOL)isConcurrent {
+    return YES;
+}
+
+- (BOOL)isExecuting {
+    return _executing;
+}
+
+- (BOOL)isFinished {
+    return _finished;
+}
+
+- (void)start {
+    //第一步就要检测是否被取消了，如果取消了，要实现相应的KVO
+    if ([self isCancelled]) {
+        [self willChangeValueForKey:@"isFinished"];
+        _finished = YES;
+        [self didChangeValueForKey:@"isFinished"];
+        return;
+    }
+    //如果没被取消，开始执行任务
+    [self willChangeValueForKey:@"isExecuting"];
+    [NSThread detachNewThreadSelector:@selector(main) toTarget:self withObject:nil];
+    _executing = YES;
+    [self didChangeValueForKey:@"isExecuting"];
+}
+
+- (void)main {
+    @try {
+        @autoreleasepool {
+            //在这里定义自己的并发任务
+            NSLog(@"自定义并发操作NSOperation");
+            
+            //doSomething
+            
+            NSThread *thread = [NSThread currentThread];
+            NSLog(@"%@",thread);
+            //任务执行完成后要实现相应的KVO
+            [self willChangeValueForKey:@"isFinished"];
+            [self willChangeValueForKey:@"isExecuting"];
+            _executing = NO;
+            _finished = YES;
+            [self didChangeValueForKey:@"isExecuting"];
+            [self didChangeValueForKey:@"isFinished"];
+        }
+    }
+    @catch (NSException *exception) {
+    }
+}
+
+
+@end
