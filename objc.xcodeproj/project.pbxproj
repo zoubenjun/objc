@@ -35,9 +35,6 @@
 		1D90168A255175EE00DC028E /* ZBJTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901689255175EE00DC028E /* ZBJTeacherViewController.m */; };
 		1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */; };
 		1D90169825517E4D00DC028E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169525517E4D00DC028E /* FBKVOController.m */; };
-		1D90169C2552283A00DC028E /* 数据结构.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169A2552283A00DC028E /* 数据结构.md */; };
-		1D90169D2552283A00DC028E /* 算法.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169B2552283A00DC028E /* 算法.md */; };
-		1D9016A025552F2C00DC028E /* 组件化.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D90169F25552F2C00DC028E /* 组件化.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1426,10 +1423,7 @@
 			files = (
 				1D900D17254BB45000DC028E /* LaunchScreen.storyboard in Resources */,
 				1D900D14254BB45000DC028E /* Assets.xcassets in Resources */,
-				1D90169D2552283A00DC028E /* 算法.md in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
-				1D90169C2552283A00DC028E /* 数据结构.md in Resources */,
-				1D9016A025552F2C00DC028E /* 组件化.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
