@@ -28,8 +28,7 @@
     [super viewDidLoad];
     
     [self zbj_ui];
-    
-    
+            
 //    [self zbj_mvp];
 //    [self zbj_mvc];
 //    [self zbj_testWeakTimer];

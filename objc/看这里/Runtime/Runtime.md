@@ -10,6 +10,9 @@ KVOController
 KVO的本质是利用Runtime在实例对象添加监听后生成一个NSKVONotifying_XXX的类对象，然后把实例对象的isa指针指向该类对象。
 NSKVONotifying_XXX是XXX类的子类，重写了父类的setAge:、class、dealloc方法，且新增了一个_isKVOA方法。
 
+#### 如果同时实现系统的KVO和自定义KVO会遇到自定义KVO失效和系统KVO崩溃问题。具体原因和解决办法可以查看这篇文章：https://juejin.cn/post/6855129007928082446
+- 系统KVO实现的时候会额外分配 0x68 字节的空间，用来存储一些额外信息。并且会持有一个全局字典_NSKeyValueContainerClassForIsa.NSKeyValueContainerClassPerOriginalClass 以 KVO 操作的原类为 key 和 NSKeyValueContainerClass 实例为 value 存储 KVO 类信息。
+
 
 ## KVC
 
