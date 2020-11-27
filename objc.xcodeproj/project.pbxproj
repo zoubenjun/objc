@@ -518,6 +518,7 @@
 		1D90169F25552F2C00DC028E /* 组件化.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "组件化.md"; sourceTree = "<group>"; };
 		1D9016A72556184500DC028E /* CocoaPods私有库.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CocoaPods私有库.md"; sourceTree = "<group>"; };
 		BDDDA7CD256C976B00D36C2D /* 其他.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "其他.md"; sourceTree = "<group>"; };
+		BDE37D87257091B40091457A /* 代码规范建议.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "代码规范建议.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1301,6 +1302,7 @@
 			isa = PBXGroup;
 			children = (
 				BDDDA7CD256C976B00D36C2D /* 其他.md */,
+				BDE37D87257091B40091457A /* 代码规范建议.md */,
 			);
 			path = "其他";
 			sourceTree = "<group>";
@@ -1585,7 +1587,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1637,7 +1639,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1651,6 +1653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = objc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1671,6 +1674,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = objc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
