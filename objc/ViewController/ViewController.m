@@ -14,6 +14,8 @@
 //#import "ZBJStudentViewController.h"
 //#import "ZBJTeacherViewController.h"
 #import "ZBJTestViewController.h"
+#import "UIImage+CornerRadius.h"
+
 
 @interface ViewController ()
 
@@ -28,31 +30,34 @@
     [super viewDidLoad];
     
     [self zbj_ui];
-            
-//    [self zbj_mvp];
-//    [self zbj_mvc];
-//    [self zbj_testWeakTimer];
-//    [self zbj_testThread];
     
-    
-    
+    //    [self zbj_mvp];
+    //    [self zbj_mvc];
+    //    [self zbj_testWeakTimer];
+    //    [self zbj_testThread];
 }
 
 - (void)zbj_ui {
-        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
-        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-        [btn1 setTitle:@"ui" forState:UIControlStateNormal];
-        [self.view addSubview:btn1];
-
-        __weak typeof (self) weakSelf = self;
-
-        [btn1 bk_addEventHandler:^(id sender) {
-            ZBJTestViewController *vc = [[ZBJTestViewController alloc] init];
-//            vc.modalPresentationStyle = UIModalPresentationFullScreen;
-            [weakSelf presentViewController:vc animated:YES completion:nil];
-        } forControlEvents:UIControlEventTouchUpInside];
-}
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn1 setTitle:@"ui" forState:UIControlStateNormal];
     
+    UIImage *image = [[UIImage imageNamed:@"image"] zbj_imageWithCornerRadius:48];
+    [btn1 setImage:image forState:UIControlStateNormal];
+    [self.view addSubview:btn1];
+    
+    __weak typeof (self) weakSelf = self;
+    
+    [btn1 bk_addEventHandler:^(id sender) {
+        ZBJTestViewController *vc = [[ZBJTestViewController alloc] init];
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        vc.block = ^(NSString *str) {
+            NSLog(@"%@",str);
+        };
+        [weakSelf presentViewController:vc animated:YES completion:nil];
+    } forControlEvents:UIControlEventTouchUpInside];
+}
+
 //- (void)zbj_mvvm {
 //        UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 50)];
 //        [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];

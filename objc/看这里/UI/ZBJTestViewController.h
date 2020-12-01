@@ -10,8 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZBJTestViewController : UIViewController
+typedef void(^ablock)(NSString *str);
 
+@interface ZBJTestViewController : UIViewController
+@property (nonatomic, copy) ablock block;
 @end
 
 NS_ASSUME_NONNULL_END

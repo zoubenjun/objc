@@ -9,6 +9,7 @@
 #import "ZBJPersonViewController.h"
 #import "ZBJPersonModel.h"
 #import "ZBJPersonView.h"
+#import "UIControl+BlocksKit.h"
 
 @interface ZBJPersonViewController ()<ZBJPersonViewDelegate>
 @property(nonatomic, strong) ZBJPersonView *personView;
@@ -27,6 +28,26 @@
     
     self.personView.nameLabel.text = [NSString stringWithFormat:@"name:%@",self.personModel.name];
     self.personView.ageLabel.text = [NSString stringWithFormat:@"age:%d",self.personModel.age];
+    
+    [self zbj_back];
+}
+
+- (void)dealloc {
+    
+    NSLog(@"ZBJPersonViewController dealloc");
+}
+
+- (void)zbj_back {
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 100, 200, 50)];
+    [btn1 setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [btn1 setTitle:@"back" forState:UIControlStateNormal];
+    [self.view addSubview:btn1];
+    
+    __weak typeof (self) weakSelf = self;
+    
+    [btn1 bk_addEventHandler:^(id sender) {
+        [weakSelf dismissViewControllerAnimated:YES completion:nil];
+    } forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)zbj_loadModel {
@@ -36,7 +57,7 @@
 }
 
 - (void)zbj_loadView {
-    _personView = [[ZBJPersonView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    _personView = [[ZBJPersonView alloc] initWithFrame:CGRectMake(100, 200, 200, 200)];
     _personView.delegate = self;
     [self.view addSubview:_personView];
 }

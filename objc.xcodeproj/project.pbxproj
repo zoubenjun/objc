@@ -35,6 +35,7 @@
 		1D90168A255175EE00DC028E /* ZBJTeacherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D901689255175EE00DC028E /* ZBJTeacherViewController.m */; };
 		1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169425517E4D00DC028E /* NSObject+FBKVOController.m */; };
 		1D90169825517E4D00DC028E /* FBKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D90169525517E4D00DC028E /* FBKVOController.m */; };
+		BDE37F122575D4070091457A /* UIImage+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = BDE37F112575D4070091457A /* UIImage+CornerRadius.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -519,6 +520,8 @@
 		1D9016A72556184500DC028E /* CocoaPods私有库.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "CocoaPods私有库.md"; sourceTree = "<group>"; };
 		BDDDA7CD256C976B00D36C2D /* 其他.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "其他.md"; sourceTree = "<group>"; };
 		BDE37D87257091B40091457A /* 代码规范建议.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "代码规范建议.md"; sourceTree = "<group>"; };
+		BDE37F102575D4070091457A /* UIImage+CornerRadius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CornerRadius.h"; sourceTree = "<group>"; };
+		BDE37F112575D4070091457A /* UIImage+CornerRadius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CornerRadius.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1220,6 +1223,8 @@
 				1D90165F25502C5200DC028E /* 分类.md */,
 				1D90166025502CB800DC028E /* UIControl+BlocksKit.h */,
 				1D90166125502CB800DC028E /* UIControl+BlocksKit.m */,
+				BDE37F102575D4070091457A /* UIImage+CornerRadius.h */,
+				BDE37F112575D4070091457A /* UIImage+CornerRadius.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -1468,6 +1473,7 @@
 				1D90167525516E9800DC028E /* ZBJStudentViewController.m in Sources */,
 				1D9016812551759400DC028E /* ZBJTeacherModel.m in Sources */,
 				1D90169725517E4D00DC028E /* NSObject+FBKVOController.m in Sources */,
+				BDE37F122575D4070091457A /* UIImage+CornerRadius.m in Sources */,
 				1D90167E25516F1200DC028E /* ZBJStudentPresenter.m in Sources */,
 				1D90169825517E4D00DC028E /* FBKVOController.m in Sources */,
 				1D901659254F054500DC028E /* ZBJGCD.m in Sources */,
@@ -1652,6 +1658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "arm64 arm64e";
 				INFOPLIST_FILE = objc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1664,6 +1671,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ace.objc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1673,6 +1681,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				EXCLUDED_ARCHS = "";
 				INFOPLIST_FILE = objc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1685,6 +1694,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ace.objc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

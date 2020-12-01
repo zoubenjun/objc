@@ -128,3 +128,19 @@ UITableView->UIScrollView->UIView->UIResponder->NSObject
 
 ## UICollectionView
 UICollectionView->UIScrollView->UIView->UIResponder->NSObject
+
+## UIViewController生命周期
+
+> 1、alloc 创建对象，分配内存空间
+> 2、init(initWithNibName)对象初始化
+> 3、loadView 默认从nib加载视图，如果没有对应的nib就创建一个空白view
+>> 3.1 检查是否有关联nib,有就通过通过加载nib文件来创建UIViewController的view
+>> 3.2 如果没有就直接代码创建一个空白view
+> 4、viewDidLoad 这里适合创建其他view准备数据等，UIViewController一个只执行一次
+> 5、viewWillAppear 视图即将被渲染到屏幕，可能会执行多次，所以可以在这里刷新数据什么的
+> 6、viewDidAppear 视图已经在屏幕完成渲染，可能会执行多次
+> 7、viewWillDisappear 视图将要从屏幕移除，可能会执行多次
+> 8、viewDidDisappear 视图已经从屏幕移除，可能会执行多次
+> 9、dealloc 视图销毁，最多执行一次，也可能不会执行（循环引用）
+
+* tips：如果通过代码创建view，只需要重写loadView创建自己的view，不需要调用[super loadView]
