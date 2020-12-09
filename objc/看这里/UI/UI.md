@@ -138,9 +138,15 @@ UICollectionView->UIScrollView->UIView->UIResponder->NSObject
 >> 3.2 如果没有就直接代码创建一个空白view
 > 4、viewDidLoad 这里适合创建其他view准备数据等，UIViewController一个只执行一次
 > 5、viewWillAppear 视图即将被渲染到屏幕，可能会执行多次，所以可以在这里刷新数据什么的
-> 6、viewDidAppear 视图已经在屏幕完成渲染，可能会执行多次
-> 7、viewWillDisappear 视图将要从屏幕移除，可能会执行多次
-> 8、viewDidDisappear 视图已经从屏幕移除，可能会执行多次
-> 9、dealloc 视图销毁，最多执行一次，也可能不会执行（循环引用）
+> 6、viewWillLayoutSubviews 即将修改子view约束，可能会执行多次
+> 7、viewDidLayoutSubviews 子view约束更新完成，可能会执行多次
+> 8、viewDidAppear 视图已经在屏幕完成渲染，可能会执行多次
+> 9、viewWillDisappear 视图将要从屏幕移除，可能会执行多次
+> 10、viewDidDisappear 视图已经从屏幕移除，可能会执行多次
+> 11、dealloc 视图销毁，最多执行一次，也可能不会执行（循环引用）
 
 * tips：如果通过代码创建view，只需要重写loadView创建自己的view，不需要调用[super loadView]
+
+## 约束优先级
+- (void)setContentHuggingPriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);//这个优先级高则不拉升，优先级低会拉升
+- (void)setContentCompressionResistancePriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);//优先级高不收缩，优先级低收缩
