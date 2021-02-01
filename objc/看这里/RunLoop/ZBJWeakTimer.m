@@ -41,15 +41,15 @@
     ZBJWeakTimerTarget* timerTarget = [[ZBJWeakTimerTarget alloc] init];
     timerTarget.target = aTarget;
     timerTarget.selector = aSelector;
-    timerTarget.timer = [NSTimer scheduledTimerWithTimeInterval:interval
-                                                         target:timerTarget
-                                                       selector:@selector(fire:)
-                                                       userInfo:userInfo
-                                                        repeats:repeats];
+//    timerTarget.timer = [NSTimer scheduledTimerWithTimeInterval:interval
+//                                                         target:timerTarget
+//                                                       selector:@selector(fire:)
+//                                                       userInfo:userInfo
+//                                                        repeats:repeats];
     
-//    //加入到NSRunLoopCommonModes，在view滑动的时候还会继续，而上面的方式创建的timer在滑动是会暂停运行
-//    timerTarget.timer = [NSTimer timerWithTimeInterval:interval target:timerTarget selector:@selector(fire:) userInfo:userInfo repeats:repeats];
-//    [[NSRunLoop currentRunLoop] addTimer:timerTarget.timer forMode:NSRunLoopCommonModes];
+    //加入到NSRunLoopCommonModes，在view滑动的时候还会继续，而上面的方式创建的timer在滑动是会暂停运行
+    timerTarget.timer = [NSTimer timerWithTimeInterval:interval target:timerTarget selector:@selector(fire:) userInfo:userInfo repeats:repeats];
+    [[NSRunLoop currentRunLoop] addTimer:timerTarget.timer forMode:NSRunLoopCommonModes];
     
     return timerTarget.timer;
 }
