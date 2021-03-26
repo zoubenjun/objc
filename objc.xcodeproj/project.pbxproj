@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0431052D2601E55100019752 /* NSObject继承关系.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 043105282601E55100019752 /* NSObject继承关系.jpeg */; };
+		04C80328260C2F1200672D79 /* RAC.md in Resources */ = {isa = PBXBuildFile; fileRef = 04C80323260C2F1200672D79 /* RAC.md */; };
 		1D67BF76255CE9A9009D66D9 /* ZBJTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */; };
 		1D900D09254BB44B00DC028E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D08254BB44B00DC028E /* AppDelegate.m */; };
 		1D900D0C254BB44B00DC028E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D900D0B254BB44B00DC028E /* SceneDelegate.m */; };
@@ -70,6 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043105282601E55100019752 /* NSObject继承关系.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "NSObject继承关系.jpeg"; sourceTree = "<group>"; };
+		04C80323260C2F1200672D79 /* RAC.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = RAC.md; sourceTree = "<group>"; };
 		1D67BF73255CE619009D66D9 /* UI.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UI.md; sourceTree = "<group>"; };
 		1D67BF74255CE9A9009D66D9 /* ZBJTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBJTestViewController.h; sourceTree = "<group>"; };
 		1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBJTestViewController.m; sourceTree = "<group>"; };
@@ -552,6 +556,7 @@
 		1D67BF6E255CE5F3009D66D9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				043105282601E55100019752 /* NSObject继承关系.jpeg */,
 				1D67BF73255CE619009D66D9 /* UI.md */,
 				1D67BF74255CE9A9009D66D9 /* ZBJTestViewController.h */,
 				1D67BF75255CE9A9009D66D9 /* ZBJTestViewController.m */,
@@ -1126,6 +1131,7 @@
 		1D9014B2254E3F8100DC028E /* 第三方库理解 */ = {
 			isa = PBXGroup;
 			children = (
+				04C80323260C2F1200672D79 /* RAC.md */,
 				1D9014B3254E3F8100DC028E /* 第三方库理解.md */,
 			);
 			path = "第三方库理解";
@@ -1438,7 +1444,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C80328260C2F1200672D79 /* RAC.md in Resources */,
 				1D900D17254BB45000DC028E /* LaunchScreen.storyboard in Resources */,
+				0431052D2601E55100019752 /* NSObject继承关系.jpeg in Resources */,
 				1D900D14254BB45000DC028E /* Assets.xcassets in Resources */,
 				1D900D12254BB44B00DC028E /* Main.storyboard in Resources */,
 			);

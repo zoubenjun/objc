@@ -65,7 +65,7 @@ UIView继承UIResponder有一个属性是CALayer
 - frame只针对父坐标系的，修改一个view的frame是修改了他对父view的位置。
 - bounds的参考坐标系是自身，修改bounds。本身默认(0,0)假如修改为（-50，50）那么原来的0，0
 位置就是现在的（-50，50），他的子视图的位置（0，0）就会显示在50，-50的位置
-- 修改bounds的sizeframe的size也会修改为同样的值
+- 修改bounds的size，frame的size也会修改为同样的值
 - center是frame.origin.x+(frame.size.width/2),frame.origin.y+(frame.size.height/2)
 
 ```
