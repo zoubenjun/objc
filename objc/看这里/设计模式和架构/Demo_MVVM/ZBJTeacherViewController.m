@@ -8,10 +8,12 @@
 
 #import "ZBJTeacherViewController.h"
 #import "ZBJTeacherViewModel.h"
+#import "ZBJTeacherView.h"
 
 @interface ZBJTeacherViewController ()
 
 @property(nonatomic, strong) ZBJTeacherViewModel *teacherViewModel;
+@property(nonatomic, strong) ZBJTeacherView *teacherView;
 
 @end
 
@@ -22,8 +24,16 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _teacherViewModel = [[ZBJTeacherViewModel alloc] initWithViewController:self];
+    [self zbj_loadView];
+    
+    _teacherViewModel = [[ZBJTeacherViewModel alloc] init];
+}
 
+- (void)zbj_loadView {
+    self.teacherView = [[ZBJTeacherView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    self.teacherView.delegate = self;
+    self.teacherView.viewModel = self;
+    [self.view addSubview:self.teacherView];
 }
 
 @end

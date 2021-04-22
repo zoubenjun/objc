@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZBJTeacherViewModel : NSObject
 
-- (instancetype)initWithViewController:(UIViewController *)viewController;
+- (instancetype)init;
 
 @end
 

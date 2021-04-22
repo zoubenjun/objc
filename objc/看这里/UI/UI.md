@@ -150,3 +150,12 @@ UICollectionView->UIScrollView->UIView->UIResponder->NSObject
 ## 约束优先级
 - (void)setContentHuggingPriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);//这个优先级高则不拉升，优先级低会拉升
 - (void)setContentCompressionResistancePriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis NS_AVAILABLE_IOS(6_0);//优先级高不收缩，优先级低收缩
+
+## layoutSubviews调用时机
+init初始化不会调用LayoutSubviews方法
+addsubView 时候会调用
+改变一个View的frame的时候调用
+滚动UIScrollView导致UIView重新布局的时候会调用
+手动调用setNeedsLayout或者layoutIfNeeded
+
+

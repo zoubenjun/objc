@@ -458,7 +458,7 @@ CaculateMaker.m
 
 @implementation CaculateMaker
 
-- (CaculateMaker *(^)(CGFloat num))add;{
+- (CaculateMaker *(^)(CGFloat num))add {
     return ^CaculateMaker *(CGFloat num){
         _result += num;
         return self;

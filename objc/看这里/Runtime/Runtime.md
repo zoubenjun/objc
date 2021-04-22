@@ -8,7 +8,7 @@ KVOController
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 ```
 KVO的本质是利用Runtime在实例对象添加监听后生成一个NSKVONotifying_XXX的类对象，然后把实例对象的isa指针指向该类对象。
-NSKVONotifying_XXX是XXX类的子类，重写了父类的setAge:、class、dealloc方法，且新增了一个_isKVOA方法。
+NSKVONotifying_XXX是XXX类的子类，重写了父类的set、class、dealloc方法，且新增了一个_isKVOA方法。
 
 #### 如果同时实现系统的KVO和自定义KVO会遇到自定义KVO失效和系统KVO崩溃问题。具体原因和解决办法可以查看这篇文章：https://juejin.cn/post/6855129007928082446
 - 系统KVO实现的时候会额外分配 0x68 字节的空间，用来存储一些额外信息。并且会持有一个全局字典_NSKeyValueContainerClassForIsa.NSKeyValueContainerClassPerOriginalClass 以 KVO 操作的原类为 key 和 NSKeyValueContainerClass 实例为 value 存储 KVO 类信息。
@@ -63,3 +63,11 @@ http://www.mamicode.com/info-detail-2952349.html
 - 处理异常崩溃（NSDictionary, NSMutableDictionary,  NSArray, NSMutableArray 的处理）
 - 按钮最小点击区设置
 - json转model
+
+## 消息传递流程
+
+## 消息转发流程
+1. Runtime 会发送 +resolveInstanceMethod: 或者 +resolveClassMethod: 尝试去 resolve(重启) 这个消息；
+2. 如果 resolve 方法返回 NO，Runtime 就发送 -forwardingTargetForSelector: 允许你把这个消息转发给另一个对象；
+3. 如果没有新的目标对象返回， Runtime 就会发送 -methodSignatureForSelector: 和 -forwardInvocation: 消息。你可以发送 -invokeWithTarget: 消息来手动转发消息或者发送 -doesNotRecognizeSelector: 抛出异常。
+

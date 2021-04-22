@@ -9,12 +9,9 @@
 #import "ZBJTeacherViewModel.h"
 
 #import "ZBJTeacherModel.h"
-#import "ZBJTeacherView.h"
 
 @interface ZBJTeacherViewModel()<ZBJTeacherViewDelegate>
 
-@property(nonatomic, weak) UIViewController *viewController;
-@property(nonatomic, strong) ZBJTeacherView *teacherView;
 @property(nonatomic, strong) ZBJTeacherModel *teacherModel;
 
 @property(nonatomic, copy) NSString *name;
@@ -25,12 +22,9 @@
 
 @implementation ZBJTeacherViewModel
 
-- (instancetype)initWithViewController:(UIViewController *)viewController {
+- (instancetype)init {
     if (self = [super init]) {
-        
-        self.viewController = viewController;
-        
-        [self zbj_loadView];
+                
         [self zbj_loadModel];
 
     }
@@ -46,13 +40,6 @@
     self.name = _teacherModel.name;
     self.age = _teacherModel.age;
     self.course = _teacherModel.course;
-}
-
-- (void)zbj_loadView {
-    self.teacherView = [[ZBJTeacherView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-    self.teacherView.delegate = self;
-    self.teacherView.viewModel = self;
-    [self.viewController.view addSubview:self.teacherView];
 }
 
 #pragma mark ————— ZBJPersonViewDelegate —————

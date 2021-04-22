@@ -177,3 +177,10 @@ int CFRunLoopRunSpecific(runloop, modeName, seconds, stopAfterHandle) {
     __CFRunLoopDoObservers(rl, currentMode, kCFRunLoopExit);
 }
 ```
+
+## runloop和线程的关系
+1. runloop与线程是一一对应的，一个runloop对应一个核心的线程，为什么说是核心的，是因为runloop是可以嵌套的，但是核心的只能有一个，他们的关系保存在一个全局的字典里。
+2. runloop是来管理线程的，当线程的runloop被开启后，线程会在执行完任务后进入休眠状态，有了任务就会被唤醒去执行任务。runloop在第一次获取时被创建，在线程结束时被销毁。
+3. 对于主线程来说，runloop在程序一启动就默认创建好了。
+4. 对于子线程来说， runloop是懒加载的，只有当我们使用的时候才会创建，所以在子线程用定时器要注意：确保子线程的runloop被开启，不然定时器不会回调。
+

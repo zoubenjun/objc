@@ -149,7 +149,7 @@
  3.isExecuting  isFinished 主要作用是在线程状态改变时，产生适当的KVO通知
  4.isConcurrent :必须覆盖并返回YES;
  */
-@interface ZBJCustomAsyncOperation : NSOperation{
+@interface ZBJCustomAsyncOperation : NSOperation {
     BOOL _executing;
     BOOL _finished;
 }
