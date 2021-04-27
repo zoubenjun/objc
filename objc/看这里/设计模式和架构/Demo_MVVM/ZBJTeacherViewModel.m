@@ -7,7 +7,7 @@
 //
 
 #import "ZBJTeacherViewModel.h"
-
+#import "ZBJTeacherView.h"
 #import "ZBJTeacherModel.h"
 
 @interface ZBJTeacherViewModel()<ZBJTeacherViewDelegate>

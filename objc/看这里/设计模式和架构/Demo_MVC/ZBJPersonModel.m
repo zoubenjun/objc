@@ -8,6 +8,12 @@
 
 #import "ZBJPersonModel.h"
 
+@interface ZBJPersonModel()
+
+@property(nonatomic, assign) NSInteger weight;
+
+@end
+
 @implementation ZBJPersonModel
 
 @end
