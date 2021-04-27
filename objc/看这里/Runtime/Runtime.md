@@ -67,6 +67,13 @@ http://www.mamicode.com/info-detail-2952349.html
 ## 消息传递流程
 
 ## 消息转发流程
++ (BOOL)resolveInstanceMethod:(SEL)sel;
++ (BOOL)resolveClassMethod:(SEL)sel;
+- (id)forwardingTargetForSelector:(SEL)aSelector;
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector;
+- (void)forwardInvocation:(NSInvocation *)anInvocation;
+- (void)doesNotRecognizeSelector:(SEL)aSelector;
+
 1. Runtime 会发送 +resolveInstanceMethod: 或者 +resolveClassMethod: 尝试去 resolve(重启) 这个消息；
 2. 如果 resolve 方法返回 NO，Runtime 就发送 -forwardingTargetForSelector: 允许你把这个消息转发给另一个对象；
 3. 如果没有新的目标对象返回， Runtime 就会发送 -methodSignatureForSelector: 和 -forwardInvocation: 消息。你可以发送 -invokeWithTarget: 消息来手动转发消息或者发送 -doesNotRecognizeSelector: 抛出异常。

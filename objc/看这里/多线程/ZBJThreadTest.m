@@ -34,14 +34,16 @@
 
     for (int i = 0; i < 10000; i ++) {
         dispatch_async(queue1, ^{
-//            [self changeValue:1];
-            [self add];
+            [self changeValue:3];
+//            [self add];
+//            self.count++;
         });
     }
     for (int i = 0; i < 10000; i ++) {
         dispatch_async(queue2, ^{
-//            [self changeValue:-1];
-            [self des];
+            [self changeValue:-3];
+//            [self ds];
+//            self.count--;
         });
     }
     
@@ -50,12 +52,11 @@
     });
 }
 
-//- (void)changeValue:(int)value {
-//    [_lock lock];
-//    self.count = self.count + value;
-//    NSLog(@"%ld", self.count);
-//    [_lock unlock];
-//}
+- (void)changeValue:(int)value {
+    [_lock lock];
+    self.count = self.count + value;
+    [_lock unlock];
+}
 
 - (void)add {
     [_lock lock];

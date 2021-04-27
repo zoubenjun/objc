@@ -121,4 +121,59 @@ void logAll(id self,SEL _cmd) {
     method_exchangeImplementations(oriMethod, curMethod);
     [_person logName];
 }
+
++ (BOOL)resolveInstanceMethod:(SEL)sel {
+    if (sel == @selector(hi)) {
+        NSLog(@"%s", __func__);
+//        class_addMethod(self, sel, (IMP)hello, "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+
+void hello(id self, SEL _cmd) {
+    NSLog(@"%s", __func__);
+}
+
++ (BOOL)resolveClassMethod:(SEL)sel {
+    if (sel == @selector(hi)) {
+        NSLog(@"%s", __func__);
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+
+- (id)forwardingTargetForSelector:(SEL)sel {
+    if (sel ==  @selector(hi)) {
+        NSLog(@"%s", __func__);
+        return self.person;
+    }
+    return [super forwardingTargetForSelector:sel];
+}
+
+- (void)forwardInvocation:(NSInvocation *)invocation {
+    NSLog(@"%s", __func__);
+    SEL sel = invocation.selector;
+//    Class1 *class1 = [Class1 new];
+//    Class2 *class2 = [Class2 new];
+//    if([class1 respondsToSelector:sel]) {
+//        [invocation invokeWithTarget:class1];
+//    }
+//    if ([class2 respondsToSelector:sel]) {
+//        [invocation invokeWithTarget:class2];
+//    }
+    if ([self.person respondsToSelector:sel]) {
+        [invocation invokeWithTarget:self.person];
+    }
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSLog(@"%s", __func__);
+    NSMethodSignature *methodSignature = [super methodSignatureForSelector:aSelector];
+    if (!methodSignature) {
+        methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:"];
+    }
+    return methodSignature;
+}
+
 @end

@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 //#import "ZBJGCD.h"
 //#import "ZBJNSOperation.h"
-//#import "ZBJRuntimeExample.h"
+#import "ZBJRuntimeExample.h"
 #import "ZBJThreadTest.h"
 
 @interface AppDelegate ()
@@ -29,11 +29,12 @@
 //    [ZBJRuntimeExample getIvars];
 //    [ZBJRuntimeExample getProperties];
 //
-//    ZBJRuntimeExample *runtime = [ZBJRuntimeExample new];
+    ZBJRuntimeExample *runtime = [ZBJRuntimeExample new];
 //    [runtime updatePrivateIvar];
 //    [runtime associatedObject];
 //    [runtime addMethod];
 //    [runtime exchangeImplementations];
+    [runtime performSelector:@selector(hi)];
     
     ZBJThreadTest *thread = [ZBJThreadTest new];
     [thread test];

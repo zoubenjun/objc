@@ -24,4 +24,8 @@
     NSLog(@"something");
 }
 
+- (void)hi {
+    NSLog(@"hi");
+}
+
 @end
